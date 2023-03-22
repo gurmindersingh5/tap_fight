@@ -1,0 +1,60 @@
+Screenmanager:
+    Start:
+        MDBoxLayout:
+            md_bg_color: "red"
+            size_hint: 1, None
+            height: root.height
+            orientation: "vertical"
+            padding: "0dp","200dp","0dp","0dp"
+
+            Label:
+                size_hint: 1, None
+                height: "20dp"
+                text: "Enter Player 1 Name"
+            TextInput:
+                id: p1
+                multiline: False
+                size_hint: .8, None
+                height: "100dp"
+                pos_hint: {"center_x": .5}
+                pos_y: "888dp"
+                font_name: "Open 24 Display St"
+            Label:
+                size_hint: 1, None
+                height: "20dp"
+                text: "Enter Player 2 Name"
+            TextInput:
+                multiline: False
+                id: p2
+                size_hint: .8, None
+                height: "100dp"
+                pos_hint: {"center_x": .5}
+                pos_y: "888dp"
+                font_name: "Open 24 Display St"
+
+            Button:
+                pos_hint: {"bottom": 1}
+                size_hint: 1, None
+                height: "100dp"
+                text: "Let's Go -->"
+                font_size: "30sp"
+                font_name: "Open 24 Display St"
+
+                on_release:
+                    root.current="HomeScreen"
+                    root.on_enter()
+
+
+    Screen:
+        name: "HomeScreen"
+        ScatterLayout:
+            do_rotation: False
+            do_scale: False
+            do_translation: False
+            rotation: 90
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint: None, None
+            size: root.height, root.width
+            Home:
+
+
